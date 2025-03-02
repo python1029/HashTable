@@ -8,7 +8,7 @@ Your team alias:
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "hash.h"
+#include "hash.cpp"
 using namespace std;
 
 int main() {
@@ -38,11 +38,11 @@ int main() {
 
     // Your time to shine starts now
 
-    cout << "==== Printing the contents of the first 5 slots ====" << endl;
+    // cout << "==== Printing the contents of the first 5 slots ====" << endl;
 
-    cout << "==== Printing the slot lengths ====" << endl;
+    // cout << "==== Printing the slot lengths ====" << endl;
 
-    cout << "==== Printing the standard variance =====" << endl;
+    // cout << "==== Printing the standard variance =====" << endl;
 
     return 0;
 }

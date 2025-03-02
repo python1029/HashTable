@@ -6,5 +6,15 @@
 using namespace std;
 class HashTable {
 
+    int _slots;
+
+    public: 
+        // constructor 
+        HashTable(int slots);
+        // Deconstructor
+        ~HashTable();
+
     int hash_function(string text);
+    void display();
+
 }; 
