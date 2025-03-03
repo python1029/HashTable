@@ -5,21 +5,6 @@
 
 using namespace std;
 
-// Node class
-// class Node
-// {
-//     /* data */
-//     string _word;
-//     Node *_next;
-
-//     // Constructor
-//     Node(string word)
-//     {
-//         _word = word;
-//         _next = nullptr;
-//     }
-// };
-
 // Node class for linking item
 struct Node
 {
