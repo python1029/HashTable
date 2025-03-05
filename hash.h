@@ -43,5 +43,4 @@ public:
 
     int hash_function(string text);
     void display();
-
-}; 
+};
