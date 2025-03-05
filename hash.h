@@ -38,7 +38,7 @@ public:
 
     // Mutator
     string prepend(string word);
-    string append(string word); // Doesn't work yet
+    string append(string word);
     double stdDev();
 
     int hash_function(string text);
