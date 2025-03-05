@@ -79,7 +79,7 @@ void HashTable::display()
 /// @brief Display the length of each slot of the Hash Table
 void HashTable::displayLength()
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < _slots; i++)
     {
         int count = 0;
         Node *currentNode = table[i];
