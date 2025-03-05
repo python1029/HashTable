@@ -148,19 +148,30 @@ double HashTable::stdDev()
     return stdDev;
 }
 
-// NOTE: this not work yet
+/// @brief Add new node at the end
+/// @param word String type input
+/// @return The added node's value
+string HashTable::append(string word)
+{
 
-// Add new string at the end
-// string HashTable::append(string word)
-// {
-//     Node *newNode = new Node(word);
-//     int hashValue = hash_function(word);
-//     Node *currentNode = table[hashValue];
-//     while (currentNode->_next != nullptr)
-//     {
-//         currentNode = currentNode->_next;
-//     }
-//     currentNode->_next = newNode;
-//     newNode->_next = nullptr;
-//     return newNode->_word;
-// }
+    Node *newNode = new Node(word);
+    int hashValue = hash_function(word);
+    Node *currentNode = table[hashValue];
+    if (table[hashValue] == nullptr) // add First element
+    {
+        newNode->_next = table[hashValue];
+        table[hashValue] = newNode;
+    }
+
+    else // if there are some elements, add at the end
+    {
+        while (currentNode->_next != nullptr)
+        {
+            currentNode = currentNode->_next;
+        }
+        currentNode->_next = newNode;
+        newNode->_next = nullptr;
+    }
+
+    return newNode->_word;
+}
