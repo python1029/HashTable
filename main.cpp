@@ -2,16 +2,18 @@
 CSE 310 Hash Function DIY Contest
 Instructor: Yiran "Lawrence" Luo
 Your name(s):
-Your team alias: 
+Your team alias:
 */
 
 #include <iostream>
 #include <iomanip>
 #include <string>
+// #include "hash.h"
 #include "hash.cpp"
 using namespace std;
 
-int main() {
+int main()
+{
 
     int k = 0;
     int n = 0;
@@ -22,7 +24,8 @@ int main() {
     string line;
     getline(cin, line);
 
-    while (getline(cin, line)) {
+    while (getline(cin, line))
+    {
         texts[n] = line;
         n++;
     }
@@ -31,7 +34,7 @@ int main() {
     // By this point, k is the # of slots, and n is the # of tokens to fit in
     // texts[] stores the input sequence of tokens/keys to be inserted into your hash table
 
-    // The template is able to be compiled by running 
+    // The template is able to be compiled by running
     //   make
     //   ./encoder < inputs/sample_input.txt
     // which puts out the placeholders only.
@@ -43,6 +46,19 @@ int main() {
     // cout << "==== Printing the slot lengths ====" << endl;
 
     // cout << "==== Printing the standard variance =====" << endl;
+
+    // HashTable newTable(k);
+    // for (int i = 0; i < n; i++)
+    // {
+    //     newTable.append(texts[i]);
+    // }
+    cout << "==== Printing the contents of the first 5 slots ====" << endl;
+    // newTable.display();
+    cout << "==== Printing the slot lengths ====" << endl;
+    // newTable.displayLength();
+    cout << "==== Printing the standard deviation =====" << endl;
+    // double stdDev = newTable.stdDev();
+    // cout << fixed << setprecision(4) << stdDev;
 
     return 0;
 }
