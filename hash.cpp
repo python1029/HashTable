@@ -38,8 +38,12 @@ int HashTable::hash_function(string text)
 {
     // Implement your own hash function here
     int totalSlot = _slots;
-    char letter = text[0];              // Take the first character(in ASCII) of the word
-    int hashValue = letter % totalSlot; // Get the remainder
+    int sumValue = 0;
+    for (char ch : text)
+    {
+        sumValue += (int)ch; // Add all decimal values of characters (based on ASCII)
+    }
+    int hashValue = sumValue % totalSlot; // Get the remainder
     return hashValue;
 }
 
@@ -59,7 +63,7 @@ string HashTable::prepend(string word)
 /// @brief Display the current state of Hash Table
 void HashTable::display()
 {
-    for (int i = 0; i < _slots; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << "Slot " << i << ": ";
         Node *currentNode = table[i];
@@ -75,7 +79,7 @@ void HashTable::display()
 /// @brief Display the length of each slot of the Hash Table
 void HashTable::displayLength()
 {
-    for (int i = 0; i < _slots; i++)
+    for (int i = 0; i < 5; i++)
     {
         int count = 0;
         Node *currentNode = table[i];
