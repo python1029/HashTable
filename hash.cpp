@@ -52,7 +52,9 @@ int HashTable::hash_function(string text)
 /// @return The added Node's value
 string HashTable::prepend(string word)
 {
-    // New Node pointer
+    // New Node, dynamically allocated pointer
+    // Why dynamic: if I define regularly, the Node will be destroyed when function ends 
+    // Why pointer: This new Node needs to point to the other Node 
     Node *newNode = new Node(word);
     int hashValue = hash_function(word);
     newNode->_next = table[hashValue];
