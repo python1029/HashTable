@@ -6,10 +6,10 @@ For Windows comamnd prompt:
 
 - The input files is in "inputs" directory
 - Build the C++ program into bianry executable by:
-  - `g++ -o fileName fileName.cpp`, `Get-content path\to\inputs\ | fileName.exe`.
-  This can be done if main.cpp `#include "hash.cpp"` not `hash.h`
+  - `g++ -o fileName fileName.cpp`, `Get-Content path\to\inputs\ | fileName.exe`.
+    This can be done if main.cpp `#include "hash.cpp"` not `hash.h`
   - Ex: `g++ -o main main.cpp` then
-    `Get-content inputs\atoz.txt | .\main.exe`
+    `Get-Content inputs\atoz.txt | .\main.exe`
 
 If "main.cpp" `#include "hash.h"`: this will link main.cpp and hash.cpp together, replace "something" with name of executable
 
